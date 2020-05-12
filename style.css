@@ -1,35 +1,36 @@
-body {
-    margin: 0px;
-}
-
-#header {
-    position: relative;
-    height: 100px;
-    width: 100%;
-    background-color: lightslategray;
+* {
+    margin: 0;
 }
 
 #sidebar {
-    position: absolute;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    background-color: cadetblue;
+    background-color: darkslateblue;
 }
 
-#content {
-    background-color: darkkhaki;
+#main {
+    background-color: darkslategray;
 }
 
-#footer {
-    background-color: darkgray;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+.left_column {
+    float: left;
+    height: 100vh;
+    width: 150px;
+}
+
+.right_column {
+    height: 100vh;
+}
+
+.header {
+    background-color: darkviolet;
     height: 50px;
 }
 
-#sidebar, #header {
-    display: grid;
+.content {
+    overflow: auto;
+}
+
+.footer {
+    background-color: forestgreen;
+    height: 50px;
+    width: 100vw;
 }
