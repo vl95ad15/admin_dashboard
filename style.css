@@ -32,14 +32,14 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     margin-left: 3px;
     list-style: none;
     border: 1px solid black;
     height: 50px;
     width: 140px;
     cursor: pointer;
-    border-radius: 10px;
+    background-color: rgb(211, 211, 211);
 }
 
 li a {
@@ -47,6 +47,7 @@ li a {
     padding: 15px 15px 17px 50px;
     color: #fff;
     text-decoration: none;
+    color: darkslategray;
 }
 
 
@@ -65,10 +66,10 @@ li a {
 }
 
 #content {
+    flex: auto;
     padding: 20px 10px 20px 10px;
     display: flex;
     background: rgb(211, 211, 211);
-    flex: auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -84,16 +85,16 @@ li a {
 #cards {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     background-color: white;
-    width: 250px;
-    height: 100px;
+    width: 300px;
+    height: 150px;
     text-align: center;
     margin: 10px;
 }
 
 #graphics {
     margin: 10px;
-    width: 500px;
-    height: 300px;
+    width: 620px;
+    height: 350px;
     background-color: white;
     text-align: center;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
