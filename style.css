@@ -1,101 +1,122 @@
 * {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-
+.container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        "nav header"
+        "nav main"
+        "nav footer";
+    height: 100vh;
 }
 
-.container{
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh;
+.header {
+    grid-area: header;
+    background: rgb(111, 111, 111);
+    background: linear-gradient(90deg, rgba(111, 111, 111, 1) 0%, rgba(148, 148, 148, 1) 40%, rgba(255, 255, 255, 1) 100%);
 }
 
-#nav {
+.logo,
+.menu {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    background-color: #394263;
 }
 
-.main {
+.menu {
+    margin-top: 10px;
     display: flex;
-    flex: 2;
     flex-direction: column;
-    overflow: auto;
+
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    text-transform: none;
+    background-color: #1abc9c;
+    height: 50px;
+}
+
+.h_menu {
+    color: #1c3a34;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    pointer-events: none;
 }
 
 ul {
-    padding: 0;
+    list-style: none;
 }
 
 li {
-    margin-bottom: 3px;
-    margin-left: 3px;
-    list-style: none;
-    border: 1px solid black;
-    height: 50px;
-    width: 140px;
     cursor: pointer;
-    background-color: rgb(211, 211, 211);
+    padding: 10px 10px 10px 30px;
 }
 
-li a {
-    cursor: pointer;
-    padding: 15px 15px 17px 50px;
-    color: #fff;
+li:hover {
+    background-color: #1abc9c;
+}
+
+a {
     text-decoration: none;
-    color: darkslategray;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
 }
 
-
-#nav ul li:hover {
-    background: red;
-}
-.nav_header {
-    height: 70px;
+.nav {
+    grid-area: nav;
+    background: #6f6f6f;
 }
 
-#header {
-    background-color: lightcoral;
-    height: 70px;
-    background-color: #648ca6;
-    display: flex;
+.main {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-area: main;
+    background-color: #ffffff;
 }
 
-#content {
-    flex: auto;
-    padding: 20px 10px 20px 10px;
-    display: flex;
-    background: rgb(211, 211, 211);
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.cards {
+    background: rgb(189, 189, 189);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 
-
-#footer {
-    background-color: #648ca6;
-    height: 40px;
-    display: flex;
+.footer {
+    grid-area: footer;
+    background: rgb(111, 111, 111);
+    background: linear-gradient(90deg, rgba(111, 111, 111, 1) 0%, rgba(148, 148, 148, 1) 40%, rgba(255, 255, 255, 1) 100%);
 }
 
-#cards {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background-color: white;
-    width: 300px;
-    height: 150px;
-    text-align: center;
-    margin: 10px;
+#item1 {
+    grid-row: 2 / span 1;
 }
 
-#graphics {
-    margin: 10px;
-    width: 620px;
-    height: 350px;
-    background-color: white;
-    text-align: center;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+#item2 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 4;
+}
+
+#item3 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+
+#item4 {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;
+}
+
+#item5 {
+    grid-column: 1 / span 4;
+    grid-row: 1;
 }
